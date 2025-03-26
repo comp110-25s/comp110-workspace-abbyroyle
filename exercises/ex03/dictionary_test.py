@@ -6,7 +6,6 @@ import pytest
 from exercises.ex03.dictionary import invert, count, favorite_color, bin_len
 
 
-# -------- invert tests --------
 def test_invert_edge_empty():
     """Invert an empty dictionary should return empty dictionary."""
     assert invert({}) == {}
@@ -23,7 +22,6 @@ def test_invert_raises_key_error():
         invert({"a": "x", "b": "x"})
 
 
-# -------- count tests --------
 def test_count_edge_empty():
     """Counting an empty list should return empty dict."""
     assert count([]) == {}
@@ -39,7 +37,6 @@ def test_count_use_case_2():
     assert count(["x", "y", "z"]) == {"x": 1, "y": 1, "z": 1}
 
 
-# -------- favorite_color tests --------
 def test_favorite_color_edge_empty():
     """Favorite color with empty dict returns None or raises."""
     with pytest.raises(ValueError):
@@ -56,7 +53,6 @@ def test_favorite_color_tie():
     assert favorite_color({"a": "red", "b": "blue", "c": "blue", "d": "red"}) == "red"
 
 
-# -------- bin_len tests --------
 def test_bin_len_edge_empty():
     """Binning empty list returns empty dictionary."""
     assert bin_len([]) == {}
